@@ -13,7 +13,7 @@ metadata:
 spec:
   {{- with .Values.prometheusRule.rules }}
   groups:
-    - name: fluentd
-      rules: {{- tpl (toYaml .) $ | nindent 8 }}
+  - name: fluentd
+    rules: {{- tpl (toYaml .) $ | nindent 4 }}
   {{- end }}
 {{- end }}
